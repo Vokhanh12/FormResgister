@@ -1,0 +1,40 @@
+div.Container{
+    width: 500px;
+    height: 500px;
+
+    margin: auto;
+}
+
+div.Top{
+    width: 500px;
+    height: 100px;
+
+    background-color: bisque;
+
+    margin: auto;
+
+    text-align: left;
+}
+
+div.Bottom{
+    width: 500px;
+    height: 400px;
+
+    background-color: aquamarine;
+}
+
+div.ContentForm{
+    width: 500px;
+    height: 50px;
+
+    background-color: darkblue;
+
+    text-align: left;
+}
+
+div.RegisterForm{
+    width: 500px;
+    height: 450px;
+
+    background-color: darkgray;
+}
