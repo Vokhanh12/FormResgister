@@ -81,10 +81,11 @@
 
         if ($result->num_rows > 0) {
             // output data of each row
+            echo "<br>Select thanh cong";
             while($row = $result->fetch_assoc()) {
-                echo "<br> username: ". $row["Username"]. " - password: ". $row["Password"]. "- repassword" . $row["Repassword"] ."-Tinhthanh: ".
-                $row["Tinhthanh"]. " - nameUser: ". $row["Nameuser"].
-                $row["Address"]. " - password: ". $row["Sdt"]. "- repassword" . $row["Email"] . "- birthOfday".$row["birthOfday"]. "<br>";
+                echo "<br> username: ". $row["Username"]. "<br> - password: ". $row["Password"]. "<br>- repassword" . $row["Repassword"] ."<br>-Tinhthanh: ".
+                $row["Tinhthanh"]. "<br> - nameUser: ". $row["Nameuser"].
+                $row["Address"]. "<br> - password: ". $row["Sdt"]. "<br>- repassword" . $row["Email"] . "<br>- birthOfday".$row["birthOfday"]. "<br>";
             }
         } else {
             echo "0 results";
@@ -106,6 +107,7 @@
         $Email = $_POST["email"];
         $BirthOfday = $_POST["birthOfday"];
 
+        $i=0;
 
         $sql ="INSERT INTO `tbl_register`(`Username`, `Password`, `Repassword`, `Tinhthanh`, `Nameuser`, `Address`, `Sdt`, `Email`, `birthOfday`)
                                          VALUES ('$Username',' $Password','$Repassword','$Tinhthanh','$NameUser','$Address','$Sdt','$Email','$BirthOfday')";
@@ -113,7 +115,8 @@
 
 
         if (mysqli_query($connect,$sql)) {
-            echo "New record created successfully";
+            echo "<br>insert thanh cong";
+           
         } else {
             echo "Error: " . $sql . "<br>" . mysqli_error($connect);
       }
