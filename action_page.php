@@ -1,4 +1,5 @@
 <?php
+//browser-sync start --proxy 127.0.0.244 --files "*.php"    
     $Check=true;
     $str=array("username","password","repassword","Tinhthanh","nameUser","Address","sdt","email","birthOfday");
     $str1=array("Tên truy cập","Mật khẩu","Nhập lại mật khẩu","Tỉnh thành","Họ và tên","Địa chỉ","SDTEmail","Ngày sinh");
@@ -121,7 +122,7 @@
             echo "Error: " . $sql . "<br>" . mysqli_error($connect);
       }
 
-
+      
 
     }
    
